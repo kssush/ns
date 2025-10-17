@@ -2,13 +2,16 @@ const tf = require('@tensorflow/tfjs');
 const natural = require('natural');
 
 // Данные для обучения
-// Увеличиваем данные в 10 раз + разнообразные примеры
 const trainingData = [
     // Корпоративные системы (30 примеров)
     { text: 'Разработать корпоративную ERP систему для управления предприятием', roles: ['Frontend', 'Backend', 'Database'], tech: ['Angular', 'Java', 'PostgreSQL'], specialists: 8 },
     { text: 'Создать систему документооборота для крупной компании', roles: ['Frontend', 'Backend', 'Database'], tech: ['Angular', 'Java', 'Oracle'], specialists: 6 },
     { text: 'Корпоративный портал с интеграцией 1С', roles: ['Frontend', 'Backend'], tech: ['React', 'Node.js', 'MongoDB'], specialists: 5 },
-    { text: 'Enterprise система аналитики данных', roles: ['Frontend', 'Backend', 'Database'], tech: ['Angular', 'Python', 'PostgreSQL'], specialists: 7 },
+    { text: 'Enterprise система аналитики данных',
+        roles: ['Frontend', 'Backend', 'Database'],
+        tech: ['Angular', 'Python', 'PostgreSQL'],
+        specialists: 7
+    },
     { text: 'CRM система для торговой компании', roles: ['Frontend', 'Backend', 'Database'], tech: ['Vue', 'PHP', 'MySQL'], specialists: 4 },
     { text: 'Система управления складом корпоративного уровня', roles: ['Frontend', 'Backend', 'Database'], tech: ['Angular', 'Java', 'PostgreSQL'], specialists: 6 },
     { text: 'Платформа для банковских операций', roles: ['Frontend', 'Backend', 'Database'], tech: ['Angular', 'Java', 'Oracle'], specialists: 9 },
